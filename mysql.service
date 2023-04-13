@@ -1,3 +1,8 @@
+#systemd mysql startup file
+#initiates mysql
+#mysql.service
+#must run '$sudo systemctl daemon-reload' to update the file
+
 [Unit]
 Description=MySQL Database Server
 After=my-services.target
