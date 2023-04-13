@@ -1,0 +1,34 @@
+#systemd rabbitmq-server startup file
+#initiates rabbitmq-server
+#rabbitmq-server.service
+#file already created and located in /usr/systemd/system
+#replace already existing version with this file
+#run '$sudo systemctl daemon-reload' to update the file
+
+[Unit]
+Description=RabbitMQ Messaging Server
+After=network.target epmd.socket my-services.target
+Wants=network.target epmd.socket
+
+[Service]
+Type=notify
+User=rabbitmq
+Group=rabbitmq
+UMask=0027
+NotifyAccess=all
+TimeoutStartSec=600
+LimitNOFILE=65536
+SyslogIdentifier=rabbitmq
+Restart=on-failure
+RestartSec=10
+WorkingDirectory=/var/lib/rabbitmq
+#ExecStart=/usr/lib/rabbitmq/bin/rabbitmq-server
+ExecStart=/usr/sbin/rabbitmq-server -detatched
+ExecStop=/usr/sbin/rabbitmqctl stop
+PIDFile=/var/run/rabbitmq/pid
+StandardOutput=append:/var/log/rabbitmq/rabbitmq-server.log
+StandardError=append:/var/log/rabbitmq/rabbitmq-server.error.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
