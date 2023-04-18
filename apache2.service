@@ -15,6 +15,7 @@ WantedBy=multi-user.target
 [Service]
 Type=simple
 ExecStart=/usr/sbin/apachectl start
+RemainAfterExit=True
 ExecStop=/usr/sbin/apachectl stop
 PIDFile=/var/run/apache2/apache2.pid
 Restart=on-failure
