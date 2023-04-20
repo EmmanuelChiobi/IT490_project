@@ -1,7 +1,7 @@
 #systemd rabbitmq-server startup file
 #initiates rabbitmq-server
 #rabbitmq-server.service
-#file already created and located in /usr/systemd/system
+#file already created and located in /usr/lib/systemd/system
 #replace already existing version with this file
 #run '$sudo systemctl daemon-reload' to update the file
 
