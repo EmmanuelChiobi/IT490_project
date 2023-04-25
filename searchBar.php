@@ -18,17 +18,17 @@ require('header.php');
 <script>
 	function HandleSearchResponse(response) {
 		try {
-		var result = JSON.parse(response);
-		result.forEach(smth);
-		function smth(show) {
-			if (typeof(showList) == "undefined") {
-				showList = "";
+			var result = JSON.parse(response);
+			result.forEach(smth);
+			function smth(show) {
+				if (typeof(showList) == "undefined") {
+					showList = "";
+				}
+				showList += ("<a class='post' href='newpage.php?name="+ show[2] +
+				"&id="+show[0]+"'>"+show[2]+"</a><br>");
 			}
-			showList += ("<a class='post' href='newpage.php?name="+ show[2] +
-			"&id="+show[0]+"'>"+show[2]+"</a><br>");
-		}
-		document.getElementById("searchResponse").innerHTML = showList;
-		showList = "";
+			document.getElementById("searchResponse").innerHTML = showList;
+			showList = "";
 		} catch(error) {
 			document.getElementById("searchResponse").innerHTML = error;
 		}
@@ -50,6 +50,11 @@ require('header.php');
 	<form id ='search'>
 
 		<!-- Search Bar and button -->
+
+		<div class="input-group">
+			<input type="search" id="showTS" class="form-control rounded" placeholder="Search.." aria-label="Search" aria-describedby="search-addon" />
+			<button type="button" class="btn btn-outline-primary" onclick="showSearch(document.getElementById('showTS').value);">Search</button>
+		</div>
 
 		<div class="input-group">
 			<input type="search" id="showTS" class="form-control rounded" placeholder="Search.." aria-label="Search" aria-describedby="search-addon" />
