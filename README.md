@@ -23,3 +23,19 @@ Source: https://www.cyberciti.biz/faq/ubuntu-22-04-lts-set-up-ufw-firewall-in-5-
 5. sudo ufw allow from 0.0.0.0 (insert IP address)
 
 6. sudo ufw deny from 0.0.0.0 (insert IP address)
+
+
+SSL SetUp:
+Follow the commands below to initiate and configure SSL 
+
+1. sudo apt-get update
+   sudo apt-get install openssl
+   
+2. sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/server.key -out /etc/ssl/certs/server.crt
+
+3. Edit apache config file (/etc/apache2/sites-available/default-ssl.conf)
+   Change 
+   SSLCertificateFile /etc/ssl/certs/server.crt
+   SSLCertificateKeyFile /etc/ssl/private/server.key
+   
+4. sudo systemctl restart apache2
