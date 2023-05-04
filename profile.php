@@ -69,10 +69,27 @@ mysqli_close($conn);
 
 }
 else{
-	redirect('login.php');
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Profile</title>
+  </head>
+  <body>
+    <h1>Profile</h1>
+    <div>
+      <p>Username: testUser </p>
+      <p>First Name: Test </p>
+      <p>Last Name: User1 </p>
+      <a href="friends.php">See User's Friends</a>
+    </div>
+  </body>
+</html>
+
+
 }
 
-?>
 
 
 <!DOCTYPE html>
