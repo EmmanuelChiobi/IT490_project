@@ -62,6 +62,25 @@ require('rabbitMQClient.php');
 		}
 		$conn->close();
 	}
-	?>
+?>
+<!-- this code is old-->
+    <table>
+      <thead>
+        <tr>
+          <th>Friends Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sean L.</td>
+        </tr>
+        <tr>
+          <td>John Z.</td>
+        </tr>
+        <tr>
+          <td>Eman C.</td>
+        </tr>
+      </tbody>
+    </table>
 </body>
 </html>
