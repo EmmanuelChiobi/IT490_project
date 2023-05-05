@@ -1,7 +1,7 @@
 <?php
 require('header.php');
 
-if (logged_in(true)) {
+if (logged_in(false, "friends.php")) {
 	$isMe = true;
 }
 
@@ -63,6 +63,13 @@ require('rabbitMQClient.php');
 	}
 ?>
 <!-- this code is old-->
+<!DOCTYPE html>
+<html>
+<head>
+        <title>My Friends</title>
+</head>
+<body>
+        <h1>My Friends</h1>
     <table>
       <thead>
         <tr>
