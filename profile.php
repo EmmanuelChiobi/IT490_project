@@ -12,7 +12,7 @@ require_once('rabbitMQLib.inc');
 
 //validates session
 
-if(!loggged_in(){
+if(!logged_in(){
 
 if(!isset($_POST)) {
         $msg = 'no post msg, fuck off';
