@@ -12,7 +12,7 @@ require_once('rabbitMQLib.inc');
 
 //validates session
 
-
+if(!loggged_in(){
 
 if (!isset($_POST)) {
         $msg = 'no post msg, fuck off';
@@ -63,7 +63,7 @@ echo "</table>";
 
 
 mysqli_close($conn);
-
+}
 ?>
 
 <!DOCTYPE html>
