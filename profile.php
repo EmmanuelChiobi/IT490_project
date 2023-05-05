@@ -14,7 +14,7 @@ require_once('rabbitMQLib.inc');
 
 if(!loggged_in(){
 
-if (!isset($_POST)) {
+if(!isset($_POST)) {
         $msg = 'no post msg, fuck off';
         echo json_encode($msg);
         exit(0);
