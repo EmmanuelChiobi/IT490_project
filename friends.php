@@ -1,5 +1,4 @@
 <?php
-require('functions.php');
 require('header.php');
 
 if (logged_in(true)) {
