@@ -1,0 +1,14 @@
+# this code was set to work with thhe failover/heartbeat
+# location: /etc/systemd/system/failover.service
+# actual script is in /opt/failover.sh
+
+[Unit]
+Description=Failover script
+
+[Service]
+Type=simple
+ExecStart=/opt/failover.sh
+
+[Install]
+WantedBy=multi-user.target
+

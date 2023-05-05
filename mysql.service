@@ -1,0 +1,17 @@
+#systemd mysql startup file
+#initiates mysql
+#mysql.service
+#must run '$sudo systemctl daemon-reload' to update the file
+
+[Unit]
+Description=MySQL Database Server
+After=my-services.target
+
+[Service]
+Type=simple
+PIDFile =/var/run/mysqld/mysqld.pid
+ExecStart=/usr/sbin/mysqld
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

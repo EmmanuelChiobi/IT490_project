@@ -1,0 +1,16 @@
+#this is the failover for mysql replicated db
+#the location of the sh file is /usr/local/bin/mysql_failover.sh
+
+
+[Unit]
+Description=MySQL Replication Failover Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/mysql_failover.sh
+
+[Install]
+WantedBy=multi-user.target
+

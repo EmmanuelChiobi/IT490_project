@@ -1,0 +1,21 @@
+#systemd apache2 startup file
+#initiates apache2 services
+#apache2.service
+#after edits, must run 
+#$sudo systemctl daemon-reload
+#$sudo systemctl start apache2.service
+
+[Unit]
+Description=Apache2 Server
+After=my-services.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/apachectl start
+RemainAfterExit=True
+ExecStop=/usr/sbin/apachectl stop
+PIDFile=/var/run/apache2/apache2.pid
+Restart=on-failure
