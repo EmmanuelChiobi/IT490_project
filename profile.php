@@ -69,7 +69,7 @@ mysqli_close($conn);
 
 }
 else{
-?>
+}?>
 
 <!DOCTYPE html>
 <html>
@@ -88,10 +88,10 @@ else{
 </html>
 
 
-}
 
 
 
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -105,14 +105,14 @@ else{
 		<th>First Name</th>
                 <th>Last Name</th>
 		</tr>
-		   <?php $row = mysqli_fetch_assoc($result);{?>
+		   <?php# $row = mysqli_fetch_assoc($result);{?>
 		<tr>
-  		   <td><?php echo $row['username']; ?></td>
-		   <td><?php echo $row['fname']; ?></td>
-                   <td><?php echo $row['lname']; ?></td>
-		</tr> <?php } ?>
+  		   <td><?php #echo $row['username']; ?></td>
+		   <td><?php #echo $row['fname']; ?></td>
+                   <td><?php #echo $row['lname']; ?></td>
+		</tr> <?php# } ?>
 	</table>
 </body>
 </html>
-
+-->
 
