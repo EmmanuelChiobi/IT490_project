@@ -11,9 +11,6 @@ require_once('rabbitMQLib.inc');
 
 
 //validates session
- 
-
-if (logged_in(true)) {
 
 
 
@@ -67,9 +64,7 @@ echo "</table>";
 
 mysqli_close($conn);
 
-}
-else{
-}?>
+?>
 
 <!DOCTYPE html>
 <html>
