@@ -1,0 +1,20 @@
+<?php
+if (!isset($_POST)) {
+	$msg = 'no post msg, fuck off';
+	echo json_encode($msg);
+	exit(0);
+}
+
+$request = $_POST;
+$response = "unsupported request type, fuck off";
+
+require('rabbitMQClient.php');
+
+$result = (recShow($request['userID'], $request['showID']));
+
+//print_r($result[0]);
+print_r(json_encode($result));
+
+
+
+exit(0);
