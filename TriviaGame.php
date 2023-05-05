@@ -1,4 +1,5 @@
 <?php
+include_once('functions.php');
 require('header.php');
 require('results.php');
 
