@@ -1,2 +1,5 @@
 # IT490_project
-Continuation of IT490 project
+
+## Front-end cluster
+
+[To be filled with info]
